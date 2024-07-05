@@ -51,13 +51,6 @@ return [
     */
 
     'channels' => [
-        'horizon' => [
-            'driver' => 'single',
-            'path' => storage_path('logs/laravel-queue.log'),
-            'level' => 'debug',
-            'days' => 7,
-        ],
-        
         'stack' => [
             'driver' => 'stack',
             'channels' => ['single'],
