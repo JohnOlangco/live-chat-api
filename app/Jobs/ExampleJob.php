@@ -34,7 +34,6 @@ class ExampleJob implements ShouldQueue
      */
     public function handle()
     {
-        sleep(10);
         Log::info('ExampleJob received data: ', ['data' => $this->data]);
         
     }

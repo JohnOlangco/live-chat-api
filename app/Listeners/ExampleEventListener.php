@@ -30,6 +30,6 @@ class ExampleEventListener implements ShouldQueue
     public function handle(ExampleEvent $event) {
         Log::info('ExampleEventListener triggered', ['event', $event, 'data' => $event->data]);
 
-        ExampleJob::dispatch($event->data);
+        ExampleJob::dispatch($event->data)->onQueue('queue-default');
     }
 }
